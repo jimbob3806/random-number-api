@@ -17,7 +17,7 @@ const resolvers = {
             const { lowerBound, upperBound } = args
             if(lowerBound >= upperBound) { return }
             const boundDif = upperBound - lowerBound
-            const randInt = Math.floor(Math.random() * boundDif + lowerBound)
+            const randInt = Math.round(Math.random() * boundDif + lowerBound)
             return randInt
         }
     }
