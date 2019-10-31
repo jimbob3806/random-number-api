@@ -15,6 +15,7 @@ const resolvers = {
     Query: {
         randomNumber: (_, args) => {
             const { lowerBound, upperBound } = args
+            if(lowerBound >= upperBound) { return }
             const boundDif = upperBound - lowerBound
             const randInt = Math.floor(Math.random() * boundDif + lowerBound)
             return randInt
